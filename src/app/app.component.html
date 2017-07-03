@@ -1,0 +1,70 @@
+<top-sidebar></top-sidebar>
+<right-sidebar></right-sidebar>
+<bottom-sidebar></bottom-sidebar>
+<left-sidebar></left-sidebar>
+
+<div id="main-content" (click)="handleCloseAllSidenav()">
+
+    <div class="quad-buttons">
+      <span class="fa fa-still-25 fa-5x" sidebarToggle="top"></span>
+      <span class="fa fa-fanta2 fa-5x" sidebarToggle="right"></span>
+      <span class="fa fa-lastgasp2 fa-5x" sidebarToggle="left"></span>
+      <span class="fa fa-chick fa-5x" sidebarToggle="bottom"></span>
+    </div>
+
+    <!--<div class="row">
+      <div class="col-md-12">
+        <alerts-list [alerts]="alerts$ | async "  (closeAlert)="onCloseAlert($event)"></alerts-list>
+        <button class="btn btn-danger" (click)="addAlert({type: 'danger', message: 'This is a danger alert'})">Danger</button>
+        <button class="btn btn-success" (click)="addAlert({type: 'success', message: 'This is a success alert'})">Success</button>
+      </div>
+
+    </div>-->
+
+    <!--<div class="row">
+      <div class="col-md-12">
+        <button class="btn btn-outline-primary" sidebarToggle="left">
+          <span class="fa fa-lastgasp2 fa-5x"></span>
+        </button>
+        <button class="btn btn-outline-primary" sidebarToggle="right">
+          <span class="fa fa-fanta2 fa-5x"></span>
+        </button>
+        <button class="btn btn-outline-primary" sidebarToggle="top">
+          <span class="fa fa-still-25 fa-5x"></span>
+        </button>
+        <button class="btn btn-outline-primary" sidebarToggle="bottom">
+          <span class="fa fa-chick fa-5x"></span>
+        </button>
+      </div>
+    </div>-->
+
+    <!--<div class="row">
+      <div class="col-md-12">
+        <button class="btn btn-outline-primary" (click)="handleOpenModal('templateFormModal')">Modal</button>
+      </div>
+    </div>-->
+
+    <!--<div class="row">
+      <div class="col-md-12">
+        <games-list [games]="games$ | async" [count]="gamesCount$ | async" [page]="gamesPage$ | async" [loading]="gamesLoading$ | async" (onPageChanged)="onGamesPageChanged($event)"></games-list>
+      </div>
+    </div>-->
+
+    <!--<div class="quad-buttons">
+      <button class="btn btn-outline-primary" >
+        <span class="fa fa-still-25 fa-5x"></span>
+      </button>
+      <button class="btn btn-outline-primary" sidebarToggle="right">
+        <span class="fa fa-fanta2 fa-5x"></span>
+      </button>
+      <button class="btn btn-outline-primary" sidebarToggle="left">
+        <span class="fa fa-lastgasp2 fa-5x"></span>
+      </button>      
+      <button class="btn btn-outline-primary" sidebarToggle="bottom">
+        <span class="fa fa-chick fa-5x"></span>
+      </button>        
+    </div>-->
+
+</div>
+<template-modal [modalState]="this.openedModalName$ | async" (onCloseModal)="handleCloseModal()"></template-modal>
+<template ngbModalContainer></template>
